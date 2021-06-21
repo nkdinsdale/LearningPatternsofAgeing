@@ -32,13 +32,3 @@ year = {2021},
 doi = {https://doi.org/10.1016/j.neuroimage.2020.117401},
 author = {Nicola K. Dinsdale and Emma Bluemke and Stephen M. Smith and Zobair Arya and Diego Vidaurre and Mark Jenkinson and Ana I.L. Namburete},
 }```
-
-
-
-
-
-
-
-
-
-
