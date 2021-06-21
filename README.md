@@ -23,7 +23,7 @@ For code for the analysis please contact.
 
 If you use code from this repository please cite:
 
-'@article{DINSDALE2021117401,
+`@article{DINSDALE2021117401,
 title = {Learning patterns of the ageing brain in MRI using deep convolutional networks},
 journal = {NeuroImage},
 volume = {224},
@@ -32,7 +32,7 @@ year = {2021},
 issn = {1053-8119},
 doi = {https://doi.org/10.1016/j.neuroimage.2020.117401},
 author = {Nicola K. Dinsdale and Emma Bluemke and Stephen M. Smith and Zobair Arya and Diego Vidaurre and Mark Jenkinson and Ana I.L. Namburete},
-}'
+}`
 
 
 
