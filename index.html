@@ -1,0 +1,400 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+	
+	h1 {
+		font-size:32px;
+		font-weight:300;
+	}
+	
+	.disclaimerbox {
+		background-color: #eee;		
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+	
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+	
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		15px 15px 0 0px #fff, /* The fourth layer */
+		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		20px 20px 0 0px #fff, /* The fifth layer */
+		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		25px 25px 0 0px #fff, /* The fifth layer */
+		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+	
+	.vert-cent {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+
+<html>
+<head>
+	<title>Learning patterns of the ageing brain in MRI using deep convolutional networks</title>
+	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:title" content="Learning patterns of the ageing brain in MRI using deep convolutional networks" />
+	<meta property="og:description" content="Paper description." />
+
+	<!-- Get from Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src=""></script> 
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-75863369-6');
+	</script>
+</head>
+
+<body>
+	<br>
+	<center>
+		<span style="font-size:36px">Learning patterns of the ageing brain in MRI using deep convolutional networks</span>
+		<br>
+		<br>
+		<center><font size="+2"><i>NeuroImage 2021 </font></center>
+		<table align=center width=600px>
+			<table align=center width=1000px>
+				<tr>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href="https://nkdinsdale.github.io/nkdinsdale/">Nicola Dinsdale</a><sup>1</sup></span>
+						</center>
+					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href="http://emmabluemke.com/">Emma Bluemke</a><sup>1</sup></span>
+						</center>
+					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href="https://www.ndcn.ox.ac.uk/team/stephen-smith">Steve Smith</a><sup>1</sup></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px">Zobair Ayra</a><sup>1</sup></span>
+						</center>
+					</td>
+
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px">Diego Vidaurre</a><sup>1,</sup><sup>3</sup></span>
+						</center>
+					</td>
+
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href="https://www.ndcn.ox.ac.uk/team/mark-jenkinson">Mark Jenkinson</a><sup>1</sup></span>
+						</center>
+					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href="https://www.pmb.ox.ac.uk/person/dr-ana-namburete">Ana Namburete</a><sup>2</sup></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+
+					<br>
+			<table align=center width=800px>
+				<tr>
+					<td align=center width=800px>
+						<center>
+							<span style="font-size:12px"><sup>1</sup>Wellcome Centre for Integrative Neuroimaging, University of Oxford</a></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+
+
+			<table align=center width=800px>
+				<tr>
+					<td align=center width=800px>
+						<center>
+							<span style="font-size:12px"><sup>2</sup>Ultrasound NeuroImage Analysis Group, University of Oxford</a></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+
+			<table align=center width=800px>
+				<tr>
+					<td align=center width=800px>
+						<center>
+							<span style="font-size:12px"><sup>3</sup>Department of Psychiatry, University of Oxford</a></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+			<br>
+
+
+			<table align=center width=250px>
+				<tr>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='https://www.sciencedirect.com/science/article/pii/S1053811920308867'>[Paper]</a></span>
+						</center>
+					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='https://github.com/nkdinsdale/LearningPatternsofAgeing'>[GitHub]</a></span><br>
+						</center>
+					</td>
+				</tr>
+			</table>
+		</table>
+	</center>
+
+	<center>
+		<table align=center width=1000px>
+			<tr>
+				<td width=800px>
+					<center>
+						<img class="round" style="width:800px" src="./resources/graphical_abstract.png"/>
+					</center>
+				</td>
+			</tr>
+		</table>
+	</center>
+
+	<hr>
+
+	<table align=center width=850px>
+		<center><h1>Abstract</h1></center>
+		<tr>
+			<td>
+			Both normal ageing and neurodegenerative diseases cause morphological changes to the brain. Age-related brain changes are subtle, nonlinear, and spatially and temporally heterogenous, both within a subject and across a population. Machine learning models are particularly suited to capture these patterns and can produce a model that is sensitive to changes of interest, despite the large variety in healthy brain appearance. In this paper, the power of convolutional neural networks (CNNs) and the rich UK Biobank dataset, the largest database currently available, are harnessed to address the problem of predicting brain age. We developed a 3D CNN architecture to predict chronological age, using a training dataset of 12,802 T1-weighted MRI images and a further 6,885 images for testing. The proposed method shows competitive performance on age prediction, but, most importantly, the CNN prediction errors correlated significantly with many clinical measurements from the UK Biobank in the female and male groups. In addition, having used images from only one imaging modality in this experiment, we examined the relationship between ΔBrainAge and the image-derived phenotypes (IDPs) from all other imaging modalities in the UK Biobank, showing correlations consistent with known patterns of ageing. Furthermore, we show that the use of nonlinearly registered images to train CNNs can lead to the network being driven by artefacts of the registration process and missing subtle indicators of ageing, limiting the clinical relevance. Due to the longitudinal aspect of the UK Biobank study, in the future it will be possible to explore whether the ΔBrainAge from models such as this network were predictive of any health outcomes.
+			</td>
+		</tr>
+	</table>
+	<br>
+
+	<center><h1>Pipeline</h1></center>
+
+	<table align=center width=420px>
+		<center>
+			<tr>
+				<td>
+				</td>
+			</tr>
+		</center>
+	</table>
+	<table align=center width=400px>
+		<tr>
+			<td align=center width=400px>
+				<center>
+					<td><img class="round" style="width:800px" src="./resources/network_architecture.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<table align=center width=850px>
+		<center>
+			<tr>
+				<td>
+				We train an ensemble of CNNs to regress age from the T1 weighted MR images using subjects from the UK Biobank. We then deconfound for age and explore the correlations with the IDPs and non-imaging variables from the the UK Biobank.
+				</td>
+			</tr>
+		</center>
+	</table>
+	<table align=center width=400px>
+		<tr>
+			<td align=center width=400px>
+				<center>
+					<td><img class="round" style="width:800px" src="./resources/deconfound.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+
+	<table align=center width=800px>
+		<br>
+		<tr><center>
+			<span style="font-size:28px">&nbsp;<a href='https://github.com/nkdinsdale/LearningPatternsofAgeing'>[GitHub]</a>
+			</center>
+		</span>
+	</table>
+	<br>
+
+		<center><h1>Results</h1></center>
+	<center><font size="+2"><i> Correlations with UK Biobank Variables </font></center>
+		<tr>
+			<td width=1000px>
+        		<center>
+        			<img class="round" style="width:800px" src="./resources/11.png"/>
+        		</center>
+        	</td>
+		</tr>
+	<br>
+		<tr>
+		<td width=1000px>
+			<center>
+				<img class="round" style="width:800px" src="./resources/13.png"/>
+			</center>
+		</td>
+	</tr>
+	</table>
+
+		<tr>
+    	<td>
+			<center>
+				<font size="-0.2"> We find biologically meaningful correlations with both the lifestyle factors and the image derived parameters from the UK Biobank, which follow our expectation of ageing from across the literature.</font>
+    		</center>
+
+		</td>
+    </tr>
+
+
+	<br>
+	<br>
+	<center><font size="+2"><i> Effect of Registration </font></center>
+
+
+	<br>
+			<tr>
+			<td width=1000px>
+        		<center>
+        			<img class="round" style="width:800px" src="./resources/22.png"/>
+        		</center>
+        	</td>
+		</tr>
+
+	<tr>
+    	<td>
+			<center>
+				<font size="-0.2"> We also show that the registration used in the preprocessing pipeline affects the model prediction. Saliency and attention maps show that non-linear registration causes the model to be drive by registration artefacts...</font>
+    		</center>
+
+		</td>
+    </tr>
+
+	<br>
+		<tr>
+		<td width=1000px>
+			<center>
+				<img class="round" style="width:800px" src="./resources/9.png"/>
+			</center>
+		</td>
+	</tr>
+
+		<tr>
+    	<td>
+			<center>
+				<font size="-0.2"> ...and that this therefore can suppress important information about the ageing brain.</font>
+    		</center>
+
+		</td>
+    </tr>
+
+	<hr>
+	<br>
+
+	<table align=center width=900px>
+		<tr>
+			<td width=300px>
+				<left>
+					<center><h1>Acknowledgements</h1></center>
+			This work was supported in parts by the Engineering and Physical Sciences Research Council (EPSRC) and Medical Research Council (MRC) [grant number EP/L016052/1] (N.D, E.B. and Z.A.), the Clarendon fund (E.B), and a Wellcome Trust Strategic Award (098369/Z/12/Z) (S.S. and D.V.). A.N. is grateful for support from the UK Royal Academy of Engineering under the Engineering for Development Research Fellowships scheme. M.J. is supported by the National Institute for Health Research (NIHR) and the Oxford Biomedical Research Centre (BRC). The Wellcome Centre for Integrative Neuroimaging is supported by core funding from the Wellcome Trust (203139/Z/16/Z).
+
+Computation used the Oxford Biomedical Research Computing (BMRC) facility, a joint development between the Wellcome Centre for Human Genetics and the Big Data Institute supported by Health Data Research UK and the NIHR Oxford Biomedical Research Centre. The views expressed are those of the author(s) and not necessarily those of the NHS, the NIHR or the Department of Health. This research has been conducted in part using the UK Biobank Resource under Application Number 8107. We are grateful to UK Biobank for making the data available, and to all UK Biobank study participants, who generously donated their time to make this resource possible. Analysis was carried out on the clusters at the Oxford Biomedical Research Computing (BMRC) facility and FMRIB (part of the Wellcome Centre for Integrative Neuroimaging). BMRC is a joint development between the Wellcome Centre for Human Genetics and the Big Data Institute, supported by Health Data Research UK and the NIHR Oxford Biomedical Research Centre.
+					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
+				</left>
+			</td>
+		</tr>
+	</table>
+
+<br>
+</body>
+</html>
+
